@@ -1,0 +1,60 @@
+
+
+<html>
+
+<style type="text/css">
+	body {
+		width : 400px;
+		padding: 3px 3px;
+	}
+
+	.btnContainer { 
+		width:100%;
+	}
+	
+	.btn {
+		margin : 5px 5px;
+		display: inline-block;
+	}
+	
+	ul {
+		list-style-type:none;
+		columns: 3;
+		-webkit-columns: 3;
+		-moz-columns: 3;
+	}
+
+</style>
+
+<body>
+
+<b>IndLish - An Indian language reader</b>
+<br><br>
+
+<p>This extension detects and converts Indian language script into readable English.</p>
+<p>It will be useful for the people, who can understand the language but can't read/write.</p>
+<p>To read a text in English, Select the text and click on <b>IndLish Covert</b> context menu.</p>
+
+<br>
+<b>Supported Languages:</b>
+<ul>
+  <li><del>Bengali</del></li>
+  <li>Hindi</li>
+  <li><del>Kannada</del></li>
+  <li><del>Malayalam</del></li>
+  <li><del>Marata</del></li>
+  <li><del>Tamil</del></li>
+  <li>Telugu</li>
+</ul>
+<br><br>
+
+<div id = "btnContainer" class = "btnContainer">
+<button id = "pause" class = "btn">Pause Once</button>
+<button id = "start" class = "btn">Run Always</button>
+<button id = "stop" class = "btn">Never Run</button>
+</div>
+
+<script type="text/javascript" src="popup.js"></script>
+
+</body>
+</html>

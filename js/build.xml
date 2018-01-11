@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project name="RestExtension" default="merge">
+	<target name="merge">
+		<filelist id="filelist" dir="">
+			<file name="GlobalConstants.js"/>
+			
+			<file name="PopUp.js"/>
+			<file name="UnicodeMap.js"/>
+			
+			<file name="TeluguConverter.js"/>
+			<file name="HindiConverter.js"/>
+			<file name="KannadaConverter.js"/>
+			<file name="TamilConverter.js"/>
+			<file name="MalayalamConverter.js"/>
+			<file name="MarataConverter.js"/>
+			<file name="BengaliConverter.js"/>
+			
+			<file name="ExtInitializer.js"/>
+		</filelist>
+
+		<concat destfile="indlish_inject.js" encoding="UTF-8" outputencoding="UTF-8" fixlastline="true">
+			<filelist refid="filelist" />
+		</concat>
+		
+	</target>
+	
+	 
+</project>
