@@ -6,11 +6,11 @@ It will be useful for the people, who can understand the language but can't read
 
 
 Supported Languages:
-1. Bengali
+1. <del>Bengali </del>
 2. Hindi
 3. Kannada
-4. Malayalam
-5. Marata
+4. <del>Malayalam</del>
+5. <del>Marata</del>
 6. Tamil
 7. Telugu
 
