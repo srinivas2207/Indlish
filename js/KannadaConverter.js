@@ -5,145 +5,139 @@
 		
 		var unicodeMap = new INDLISH_EXT.UnicodeMap();
 		
-		unicodeMap.put('0901', 'n');   // ँ
-		unicodeMap.put('0902', 'n');   // ं
-		unicodeMap.put('0903', 'ah');   // ः
-		unicodeMap.put('0905', 'a');   // अ
-		unicodeMap.put('0906', 'aa');   // आ
-		unicodeMap.put('0907', 'i');   // इ
-		unicodeMap.put('0908', 'Ee');   // ई
-		unicodeMap.put('0909', 'u');   // उ
-		unicodeMap.put('090A', 'oo');   // ऊ
-		unicodeMap.put('090B', 'ru');   // ऋ
-		unicodeMap.put('090D', '');   // ऍ
-		unicodeMap.put('090E', '');   // ऎ
-		unicodeMap.put('090F', 'e');   // ए
-		unicodeMap.put('0910', 'ai');   // ऐ
-		unicodeMap.put('0911', '');   // ऑ
-		unicodeMap.put('0912', '');   // ऒ
-		unicodeMap.put('0913', 'Vo');   // ओ
-		unicodeMap.put('0914', 'Av');   // औ
+		unicodeMap.put("0C82", "m");   // ಂ
+		unicodeMap.put("0C83", "ah");   // ಃ
 		
-		unicodeMap.put('0915', 'k');   // क
-		unicodeMap.put('0916', 'kh');   // ख
-		unicodeMap.put('0917', 'g');   // ग
-		unicodeMap.put('0918', 'gh');   // घ
-		unicodeMap.put('0919', '');   // ङ
-		unicodeMap.put('091A', 'ch');   // च
-		unicodeMap.put('091B', 'ch');   // छ
-		unicodeMap.put('091C', 'j');   // ज
-		unicodeMap.put('091D', 'jh');   // झ
-		unicodeMap.put('091E', '');   // ञ
-		unicodeMap.put('091F', 't');   // ट
-		unicodeMap.put('0920', 't');   // ठ
-		unicodeMap.put('0921', 'd');   // ड
-		unicodeMap.put('0922', 'd');   // ढ
-		unicodeMap.put('0923', 'n');   // ण
-		unicodeMap.put('0924', 't');   // त
-		unicodeMap.put('0925', 'th');   // थ
-		unicodeMap.put('0926', 'd');   // द
-		unicodeMap.put('0927', 'dh');   // ध
-		unicodeMap.put('0928', 'n');   // न
-		unicodeMap.put('0929', '');   // ऩ
-		unicodeMap.put('092A', 'p');   // प
-		unicodeMap.put('092B', 'ph');   // फ
-		unicodeMap.put('092C', 'b');   // ब
-		unicodeMap.put('092D', 'bh');   // भ
-		unicodeMap.put('092E', 'm');   // म
-		unicodeMap.put('092F', 'y');   // य
-		unicodeMap.put('0930', 'r');   // र
-		unicodeMap.put('0931', '');   // ऱ
-		unicodeMap.put('0932', 'l');   // ल
-		unicodeMap.put('0933', '');   // ळ
-		unicodeMap.put('0934', '');   // ऴ
-		unicodeMap.put('0935', 'v');   // व
-		unicodeMap.put('0936', 's');   // श
-		unicodeMap.put('0937', 'sh');   // ष
-		unicodeMap.put('0938', 's');   // स
-		unicodeMap.put('0939', 'h');   // ह
+		unicodeMap.put("0C85", "a");   // ಅ
+		unicodeMap.put("0C86", "aa");   // ಆ
+		unicodeMap.put("0C87", "i");   // ಇ
+		unicodeMap.put("0C88", "ee");   // ಈ
+		unicodeMap.put("0C89", "u");   // ಉ
+		unicodeMap.put("0C8A", "00");   // ಊ
+		unicodeMap.put("0C8B", "ru");   // ಋ
+		unicodeMap.put("0C8C", "l");   // ಌ
+		unicodeMap.put("0C8E", "e");   // ಎ
+		unicodeMap.put("0C8F", "e");   // ಏ
+		unicodeMap.put("0C90", "ai");   // ಐ
+		unicodeMap.put("0C92", "o");   // ಒ
+		unicodeMap.put("0C93", "oo");   // ಓ
+		unicodeMap.put("0C94", "au");   // ಔ
 		
-		unicodeMap.put('093C', '');   // ़
-		unicodeMap.put('093D', '');   // ऽ
-		unicodeMap.put('093E', 'aa');   // ा
-		unicodeMap.put('093F', 'i');   // ि
-		unicodeMap.put('0940', 'ee');   // ी
-		unicodeMap.put('0941', 'u');   // ु
-		unicodeMap.put('0942', 'oo');   // ू
-		unicodeMap.put('0943', 'ru');   // ृ
-		unicodeMap.put('0944', 'roo');   // ॄ
-		unicodeMap.put('0945', '');   // ॅ
-		unicodeMap.put('0946', '');   // ॆ
-		unicodeMap.put('0947', 'e');   // े
-		unicodeMap.put('0948', 'ai');   // ै
-		unicodeMap.put('0949', '');   // ॉ
-		unicodeMap.put('094A', '');   // ॊ
-		unicodeMap.put('094B', 'o');   // ो
-		unicodeMap.put('094C', 'av');   // ौ
-		unicodeMap.put('094D', '');   // ्
+		unicodeMap.put("0C95", "k");   // ಕ
+		unicodeMap.put("0C96", "kh");   // ಖ
+		unicodeMap.put("0C97", "g");   // ಗ
+		unicodeMap.put("0C98", "gh");   // ಘ
+		unicodeMap.put("0C99", "n");   // ಙ
+		unicodeMap.put("0C9A", "ch");   // ಚ
+		unicodeMap.put("0C9B", "ch");   // ಛ
+		unicodeMap.put("0C9C", "j");   // ಜ
+		unicodeMap.put("0C9D", "jh");   // ಝ
+		unicodeMap.put("0C9E", "n");   // ಞ
+		unicodeMap.put("0C9F", "t");   // ಟ
+		unicodeMap.put("0CA0", "t");   // ಠ
+		unicodeMap.put("0CA1", "d");   // ಡ
+		unicodeMap.put("0CA2", "d");   // ಢ
+		unicodeMap.put("0CA3", "n");   // ಣ
+		unicodeMap.put("0CA4", "t");   // ತ
+		unicodeMap.put("0CA5", "th");   // ಥ
+		unicodeMap.put("0CA6", "d");   // ದ
+		unicodeMap.put("0CA7", "dh");   // ಧ
+		unicodeMap.put("0CA8", "n");   // ನ
+		unicodeMap.put("0CAA", "p");   // ಪ
+		unicodeMap.put("0CAB", "f");   // ಫ
+		unicodeMap.put("0CAC", "b");   // ಬ
+		unicodeMap.put("0CAD", "bh");   // ಭ
+		unicodeMap.put("0CAE", "m");   // ಮ
+		unicodeMap.put("0CAF", "y");   // ಯ
+		unicodeMap.put("0CB0", "r");   // ರ
+		unicodeMap.put("0CB1", "r");   // ಱ
+		unicodeMap.put("0CB2", "l");   // ಲ
+		unicodeMap.put("0CB3", "l");   // ಳ
+		unicodeMap.put("0CB5", "v");   // ವ
+		unicodeMap.put("0CB6", "sh");   // ಶ
+		unicodeMap.put("0CB7", "sh");   // ಷ
+		unicodeMap.put("0CB8", "s");   // ಸ
+		unicodeMap.put("0CB9", "h");   // ಹ
 		
-		unicodeMap.put('0950', '');   // ॐ
-		unicodeMap.put('0951', '');   // ॑
-		unicodeMap.put('0952', '');   // ॒
-		unicodeMap.put('0953', '');   // ॓
-		unicodeMap.put('0954', '');   // ॔
-		
-		unicodeMap.put('0958', 'K');   // क़
-		unicodeMap.put('0959', 'Kh');   // ख़
-		unicodeMap.put('095A', 'g');   // ग़
-		unicodeMap.put('095B', 'j');   // ज़
-		unicodeMap.put('095C', 'd');   // ड़
-		unicodeMap.put('095D', 't');   // ढ़
-		unicodeMap.put('095E', 'ph');   // फ़
-		unicodeMap.put('095F', 'y');   // य़
-		unicodeMap.put('0960', 'Ri');   // ॠ
-		unicodeMap.put('0961', '');   // ॡ
+		unicodeMap.put("0CBC", "");   // ಼
+		unicodeMap.put("0CBD", "a");   // ಽ
+		unicodeMap.put("0CBE", "a");   // ಾ
+		unicodeMap.put("0CBF", "i");   // ಿ
+		unicodeMap.put("0CC0", "ee");   // ೀ
+		unicodeMap.put("0CC1", "u");   // ು
+		unicodeMap.put("0CC2", "oo");   // ೂ
+		unicodeMap.put("0CC3", "ru");   // ೃ
+		unicodeMap.put("0CC4", "roo");   // ೄ
+		unicodeMap.put("0CC6", "e");   // ೆ
+		unicodeMap.put("0CC7", "e");   // ೇ
+		unicodeMap.put("0CC8", "ai");   // ೈ
+		unicodeMap.put("0CCA", "o");   // ೊ
+		unicodeMap.put("0CCB", "oo");   // ೋ
+		unicodeMap.put("0CCC", "au");   // ೌ
+		unicodeMap.put("0CCD", "");   // ್
+
+		unicodeMap.put("0CD5", "a");   // ೕ
+		unicodeMap.put("0CD6", "");   // ೖ
+		unicodeMap.put("0CDE", "");   // ೞ
+		unicodeMap.put("0CE0", "");   // ೠ
+		unicodeMap.put("0CE1", "");   // ೡ
+		unicodeMap.put("0CE2", "");   // ೢ
+		unicodeMap.put("0CE3", "");   // ೣ
+		unicodeMap.put("0CE6", "");   // ೦
+		unicodeMap.put("0CE7", "");   // ೧
+		unicodeMap.put("0CE8", "");   // ೨
+		unicodeMap.put("0CE9", "");   // ೩
+		unicodeMap.put("0CEA", "");   // ೪
+		unicodeMap.put("0CEB", "");   // ೫
+		unicodeMap.put("0CEC", "");   // ೬
+		unicodeMap.put("0CED", "");   // ೭
+		unicodeMap.put("0CEE", "");   // ೮
+		unicodeMap.put("0CEF", "");   // ೯
+		unicodeMap.put("0CF1", "");   // ೱ
+		unicodeMap.put("0CF2", "");   // ೲ
 		
 		
-		var langBegin	= parseInt("0900", 16);
-		var langEnd		= parseInt("097E", 16);
+		var langBegin	= parseInt("0C80", 16);
+		var langEnd		= parseInt("0CFF", 16);
 		
-		var consBegin	= parseInt("0915", 16);
-		var consEnd		= parseInt("0939", 16);
+		var consBegin = parseInt("0C95", 16);
+		var consEnd	  = parseInt("0CB9", 16);
 		
-		var vowelBegin	= parseInt("0901", 16);
-		var vowelEnd	= parseInt("0914", 16);
+		var vowelBegin = parseInt("0C85", 16);
+		var vowelEnd   = parseInt("0C94", 16);
 		
-		var antraBegin	= parseInt("093C", 16);
-		var antraEnd	= parseInt("094D", 16);
+		var anthraBegin	= parseInt("0CBC", 16);
+		var anthraEnd	= parseInt("0CCD", 16);
 		
-		var angCode 	= parseInt("0902", 16);
+		var vaCode 		= parseInt("0CB5", 16);
+		var shankarSCode= parseInt("0CB6", 16);
 		
-		objRef.checkLanguage = checkLanguage;
+		var halfChar	=  parseInt("0CCD", 16);
+		
+		var sunnaCode 	= parseInt("0C82", 16);
+		var sunnaBegin 	= parseInt("0C95", 16);
+		var sunnaEnd  	= parseInt("0CA8", 16);
+		
 		objRef.convert = convert;
 		
-		function checkLanguage(sampleText)  {
-			var textLength = sampleText.length;
-			var falseCount = 0;
-			var trueCount = 0;
-			
-			for(var i=0; i<textLength; i++) {
-				var code = sampleText.charCodeAt(i);
-				if (code >= langBegin && code <= langEnd) {
-					trueCount++;
-					if (trueCount > textLength/2) {
-						return true;
-					}
-				} else {
-					falseCount++;
-					if (falseCount > textLength/2) {
-						return false;
-					}
-				}
-			}
-			return false;
-		}
-		 
+	
 		function convert(data) {
 			var englishRes = "";
 			var strLen =  data.length;
 			for (var i = 0; i < strLen; i++) {
 				var code = data.charCodeAt(i);
 				if (code >= langBegin && code <= langEnd) {
+					var nextCode = null;
+					var prevCode = null;
+					
+					if (i > 0) {
+						prevCode = data.charCodeAt(i-1);
+					}
+					
+					if (i < strLen-1) {
+						nextCode = data.charCodeAt(i+1);
+					}
+					
 					var unicode = code.toString(16);
 					if (unicode.length == 3) {
 						unicode = "0" + unicode;
@@ -153,11 +147,26 @@
 					
 					var letter = unicodeMap.get(unicode) != null ? unicodeMap.get(unicode) : data.charAt(i) + "";
 					if (code >= consBegin && code <=consEnd) {
+						//Handling Va case, using v and w
+						if (code == vaCode && prevCode == halfChar) {
+							letter = "w";
+						}
+						
+						//Handling shankar sa
+						if (code == shankarSCode && nextCode == halfChar) {
+							letter = "s";
+						}
+						
+						if (nextCode >= anthraBegin && nextCode <=anthraEnd) {
+								
+						} else {
+							letter = letter + "a";
+						}
+					} else if(code == sunnaCode) {
 						if (i < strLen-1) {
 							var nextCode = data.charCodeAt(i+1);
-							
-							if ((nextCode >= consBegin && nextCode <=consEnd) || nextCode == angCode ) {
-								letter = letter + "a";
+							if (nextCode >= sunnaBegin && nextCode <=sunnaEnd) {
+								letter = "n";
 							} 
 						}
 					}
@@ -166,6 +175,7 @@
 				} else {
 					englishRes += data.charAt(i);
 				}
+				
 			}
 			if (englishRes) {
 				englishRes = englishRes.toLowerCase();

@@ -1,6 +1,5 @@
 var INDLISH_EXT = {};
 
-
 const POPUP_CSS = 
 	`
 	/* Skin for Simple Dialog Box Plugin */

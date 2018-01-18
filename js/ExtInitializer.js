@@ -121,6 +121,7 @@
 	
 	function convertText(selText) {
 		
+		var languageDetector 	= INDLISH_EXT.LanguageDetector.getInstance();
 		var TeluguConverter 	= INDLISH_EXT.TeluguConverter;
 		var HindiConverter 		= INDLISH_EXT.HindiConverter;
 		var TamilConverter 		= INDLISH_EXT.TamilConverter;
@@ -129,74 +130,60 @@
 		var MarataConverter 	= INDLISH_EXT.MarataConverter;
 		var BengaliConverter 	= INDLISH_EXT.BengaliConverter;
 		
+		
 		var data = {language : null, text : selText};
 		
 		if (selText) {
-			
-			var sampleText = getNonLatinText(selText);
-			
-			if (sampleText == null) {
+			var sampleText = languageDetector.getNonLatinText(selText);
+			if (sampleText == null || sampleText.length == 0) {
 				data.language = "English";
 				data.text = selText;
 				return data;
 			}
 			
+			var langCode = languageDetector.checkLanguage(sampleText);
+			var langList = languageDetector.getLanguageCodeList();
 			
-			// Telugu converter
-			var teluguConverter = new TeluguConverter();
-			if (teluguConverter.checkLanguage(sampleText)) {
-				data.language = "Telugu";
-				data.text = teluguConverter.convert(selText);
+			if (langCode == 0) {
 				return data;
 			}
 			
-			// Hindi converter
-			var hindiConverter = new HindiConverter();
-			if (hindiConverter.checkLanguage(sampleText)) {
-				data.language = "Hindi";
-				data.text = hindiConverter.convert(selText);
-				return data;
+			var language = null;
+			var convertedText = null;
+			
+			switch(langCode) {
+				case langList.Bengali.code:
+					convertedText = new BengaliConverter().convert(selText);
+					language = "Bengali";
+					break;
+				case langList.Hindi.code:
+					convertedText = new HindiConverter().convert(selText);
+					language = "Hindi";
+					break;
+				case langList.Kannada.code:
+					convertedText = new KannadaConverter().convert(selText);
+					language = "Kannada";
+					break;
+				case langList.Malayalam.code:
+					convertedText = new MalayalamConverter().convert(selText);
+					language = "Malayalam";
+					break;
+				case langList.Marata.code:
+					convertedText = new MarataConverter().convert(selText);
+					language = "Marata";
+					break;
+				case langList.Tamil.code:
+					convertedText = new TamilConverter().convert(selText);
+					language = "Tamil";
+					break;
+				case langList.Telugu.code:
+					convertedText = new TeluguConverter().convert(selText);
+					language = "Telugu";
+					break;
 			}
 			
-			// Kannada converter
-			var kannadaConverter = new KannadaConverter();
-			if (kannadaConverter.checkLanguage(sampleText)) {
-				data.language = "Kannada";
-				data.text = kannadaConverter.convert(selText);
-				return data;
-			}
-			
-			// Tamil converter
-			var tamilConverter = new TamilConverter();
-			if (tamilConverter.checkLanguage(sampleText)) {
-				data.language = "Tamil";
-				data.text = tamilConverter.convert(selText);
-				return data;
-			}
-			
-			// Malayalam converter
-			var malayalamConverter = new MalayalamConverter();
-			if (malayalamConverter.checkLanguage(sampleText)) {
-				data.language = "Malayalam";
-				data.text = malayalamConverter.convert(selText);
-				return data;
-			}
-			
-			// Marata converter
-			var marataConverter = new MarataConverter();
-			if (marataConverter.checkLanguage(sampleText)) {
-				data.language = "Marati";
-				data.text = marataConverter.convert(selText);
-				return data;
-			}
-			
-			// Bengali converter
-			var bengaliConverter = new BengaliConverter();
-			if (bengaliConverter.checkLanguage(sampleText)) {
-				data.language = "Bengali";
-				data.text = bengaliConverter.convert(selText);
-				return data;
-			}
+			data.language = language;
+			data.text = convertedText;
 		}
 		return data;
 	}

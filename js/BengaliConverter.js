@@ -86,31 +86,8 @@
 		
 		var sunnaCode 	=  parseInt("0C02", 16);
 		
-		objRef.checkLanguage = checkLanguage;
 		objRef.convert = convert;
 		
-		
-		function checkLanguage(sampleText)  {
-			var textLength = sampleText.length;
-			var falseCount = 0;
-			var trueCount = 0;
-			
-			for(var i=0; i<textLength; i++) {
-				var code = sampleText.charCodeAt(i);
-				if (code >= langBegin && code <= langEnd) {
-					trueCount++;
-					if (trueCount > textLength/2) {
-						return true;
-					}
-				} else {
-					falseCount++;
-					if (falseCount > textLength/2) {
-						return false;
-					}
-				}
-			}
-			return false;
-		}
 		 
 		function convert(data) {
 			var englishRes = "";

@@ -1,6 +1,6 @@
 {
   "name": "IndLish",
-  "version": "0.0.1",
+  "version": "1.1",
   "manifest_version": 2,
   "description": "This extension is to decect and covert Indic language scripts into readable English.",
   "icons": {

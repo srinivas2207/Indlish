@@ -15,6 +15,7 @@
 			<file name="MarataConverter.js"/>
 			<file name="BengaliConverter.js"/>
 			
+			<file name="LanguageDetector.js"/>
 			<file name="ExtInitializer.js"/>
 		</filelist>
 

@@ -41,7 +41,7 @@
 		unicodeMap.put("0C27", "DH");   // ధ
 		unicodeMap.put("0C28", "N");   // న
 		unicodeMap.put("0C2A", "P");   // ప  
-		unicodeMap.put("0C2B", "PH");   // ఫ  
+		unicodeMap.put("0C2B", "F");   // ఫ  
 		unicodeMap.put("0C2C", "B");   // బ  
 		unicodeMap.put("0C2D", "BH");   // భ  
 		unicodeMap.put("0C2E", "M");   // మ
@@ -51,7 +51,7 @@
 		unicodeMap.put("0C32", "L");   // ల  
 		unicodeMap.put("0C33", "L");   // ళ 
 		unicodeMap.put("0C35", "V");   // వ
-		unicodeMap.put("0C36", "S");   // శ
+		unicodeMap.put("0C36", "Sh");   // శ
 		unicodeMap.put("0C37", "SH");   // ష
 		unicodeMap.put("0C38", "S");   // స 
 		unicodeMap.put("0C39", "H");   // హ 
@@ -78,39 +78,19 @@
 		var consBegin	= parseInt("0C15", 16);
 		var consEnd		= parseInt("0C39", 16);
 		
-		var vowelBegin	= parseInt("0C3D", 16);
-		var vowelEnd	= parseInt("0C4D", 16);
+		var anthraBegin	= parseInt("0C3D", 16);
+		var anthraEnd	= parseInt("0C4D", 16);
 		
 		var sunnaBegin 	= parseInt("0C15", 16);
 		var sunnaEnd  	= parseInt("0C28", 16);
 		
-		var sunnaCode 	=  parseInt("0C02", 16);
+		var sunnaCode 	= parseInt("0C02", 16);
 		
-		objRef.checkLanguage = checkLanguage;
+		var vaCode 		= parseInt("0C35", 16);
+		var halfChar	= parseInt("0C4D", 16);
+		var shankarSCode= parseInt("0C36", 16);
+		
 		objRef.convert = convert;
-		
-		
-		function checkLanguage(sampleText)  {
-			var textLength = sampleText.length;
-			var falseCount = 0;
-			var trueCount = 0;
-			
-			for(var i=0; i<textLength; i++) {
-				var code = sampleText.charCodeAt(i);
-				if (code >= langBegin && code <= langEnd) {
-					trueCount++;
-					if (trueCount > textLength/2) {
-						return true;
-					}
-				} else {
-					falseCount++;
-					if (falseCount > textLength/2) {
-						return false;
-					}
-				}
-			}
-			return false;
-		}
 		 
 		function convert(data) {
 			var englishRes = "";
@@ -118,6 +98,17 @@
 			for (var i = 0; i < strLen; i++) {
 				var code = data.charCodeAt(i);
 				if (code >= langBegin && code <= langEnd) {
+					var nextCode = null;
+					var prevCode = null;
+					
+					if (i > 0) {
+						prevCode = data.charCodeAt(i-1);
+					}
+					
+					if (i < strLen-1) {
+						nextCode = data.charCodeAt(i+1);
+					}
+					
 					var unicode = code.toString(16);
 					if (unicode.length == 3) {
 						unicode = "0" + unicode;
@@ -127,15 +118,20 @@
 					
 					var letter = unicodeMap.get(unicode) != null ? unicodeMap.get(unicode) : data.charAt(i) + "";
 					if (code >= consBegin && code <=consEnd) {
-						if (i < strLen-1) {
-							var nextCode = data.charCodeAt(i+1);
-							
-							if (nextCode >= vowelBegin && nextCode <=vowelEnd) {
-							} else {
-								letter = letter + "a";
-							}
+						//Handling Va case, using v and w
+						if (code == vaCode && prevCode == halfChar) {
+							letter = "w";
+						}
+						
+						//Handling shankar sa
+						if (code == shankarSCode && nextCode == halfChar) {
+							letter = "s";
+						}
+						
+						if (nextCode >= anthraBegin && nextCode <=anthraEnd) {
+								
 						} else {
-							letter = letter + "a";
+								letter = letter + "a";
 						}
 					} else if(code == sunnaCode) {
 						if (i < strLen-1) {
