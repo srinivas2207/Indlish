@@ -2,7 +2,7 @@
 
 <p>This chrome extension detects and converts Indian language script into readable English.
 It will be useful for the people, who can understand the language but can't read/write.</p>
-<p>To read a text in English, Select the text and click on IndLish Covert context menu.</p>
+<p>To read a text in English, Select the text and click on <b>IndLish Covert</b> context menu.</p>
 
 
 Supported Languages:
@@ -22,7 +22,7 @@ This file get injected into the web pages by bg/background.js
   </p>
   
  <p>
-  To generated the merged file run <b>ant merge</b>  inside JS folder.
+  To generate the merged file run <b>ant merge</b>  inside JS folder.
   </p>
 
 
@@ -35,7 +35,7 @@ Installation
 4.	Click on **Load Unpacked Extension** and select the extracted folder.
 5.	If there’s no error it will show the extension on chrome’s top right corner.
 
-Extension at Chrime WebStore
+Extension at Chrome WebStore
 ----------------------------
 https://chrome.google.com/webstore/detail/indlish/dijeilkngpapofopcdbgapldapmffppp
 
