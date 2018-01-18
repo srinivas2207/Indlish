@@ -1,7 +1,7 @@
 # Indlish
 
-<p>This chrome extension detects and converts Indian language script into readable English.
-It will be useful for the people, who can understand the language but can't read/write.</p>
+<p>This chrome extension detects and converts Indian language scripts into readable English.
+It will be useful for the people, who can speek/understand the language but can't read/write.</p>
 <p>To read a text in English, Select the text and click on <b>IndLish Covert</b> context menu.</p>
 
 
