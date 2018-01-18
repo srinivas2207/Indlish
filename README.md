@@ -17,12 +17,12 @@ Supported Languages:
 Code Generation
 ----------------
 <p>
-All the JS files inside JS folder need to be merged into one file indlish_inject.js.
+All the JS files inside JS folder need to be merged into one file <b>indlish_inject.js</b>
 This file get injected into the web pages by bg/background.js
   </p>
   
  <p>
-  To generated the merged file run **ant merge** inside JS folder.
+  To generated the merged file run <b>ant merge</b>  inside JS folder.
   </p>
 
 
