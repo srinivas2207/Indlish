@@ -35,6 +35,10 @@ Installation
 4.	Click on **Load Unpacked Extension** and select the extracted folder.
 5.	If there’s no error it will show the extension on chrome’s top right corner.
 
+Extension at Chrime WebStore
+----------------------------
+https://chrome.google.com/webstore/detail/indlish/dijeilkngpapofopcdbgapldapmffppp
+
  Contributors
  ------------
  1. Telugu  - Srinivas Donapati
