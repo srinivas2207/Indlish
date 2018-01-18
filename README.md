@@ -40,3 +40,4 @@ Installation
  1. Telugu  - Srinivas Donapati
  2. Hindi   - Rajkishor Gupta
  3. Tamil   - Thenmozhi Banan
+ 4. Kannada - Srinivas Donapati
